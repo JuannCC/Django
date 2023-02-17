@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITULO</title>
+</head>
+<body>
+    <h1>Buscando autor por ID: </h1>
+    <p>{{author}}</p>
+
+    <h1>Buscando autor: </h1>
+    <ul>  
+        {%for elm in filtred%}   
+        <li>{{elm.name}} ({{elm.email}})</li>
+        {%endfor%} 
+    </ul>
+    <h1>Elementos ordenados por email: </h1>
+    <ul>  
+        {%for order in orders%}   
+        <li>({{order.email}})</li>
+        {%endfor%} 
+    </ul>
+    <h1>Elementos que contiene yes: </h1>
+    <ul>  
+        {%for filter3 in filters3%}   
+        <li>({{filter3.name}})</li>
+        {%endfor%} 
+    </ul>
+    <h1>Elementos con ID menor o igual a 15: </h1>
+    <ul>  
+        {%for filter2 in filters2%}   
+        <li>({{filter2.email}})</li>
+        {%endfor%} 
+    </ul>
+    <h1>Los 10 primeros emails: </h1>
+    <ul>  
+        {%for limit in limits%}   
+        <li> ({{limit.email}})</li>
+        {%endfor%} 
+    </ul>
+    <h1>Emails con offset de 5 a 10: </h1>
+    <ul>  
+        {%for offs in offset%}   
+        <li> ({{offs.email}})</li>
+        {%endfor%} 
+    </ul>
+
+    <h1>Todos los autores</h1>
+    <ul>  
+        {%for author in authors%}   
+        <li>{{author.name}} ({{author.email}})</li>
+        {%endfor%} 
+    </ul>
+    <h1>Total de autores: {{authors|length}}</h1>
+</body>
+</html>
